@@ -1,0 +1,60 @@
+{
+  "accuracy": 0.8663095758635767,
+  "precision": 0.816062319294304,
+  "recall": 0.9775213976881673,
+  "f1": 0.8895245551172805,
+  "roc_auc": 0.9803200197462087,
+  "pr_auc": 0.9855751192186704,
+  "prediction_seconds": 4.448966400000245,
+  "confusion_matrix": [
+    [
+      27012,
+      9988
+    ],
+    [
+      1019,
+      44313
+    ]
+  ],
+  "per_class": {
+    "0": {
+      "precision": 0.963647390389212,
+      "recall": 0.7300540540540541,
+      "f1-score": 0.8307422613830328,
+      "support": 37000.0
+    },
+    "1": {
+      "precision": 0.816062319294304,
+      "recall": 0.9775213976881673,
+      "f1-score": 0.8895245551172805,
+      "support": 45332.0
+    },
+    "accuracy": 0.8663095758635767,
+    "macro avg": {
+      "precision": 0.889854854841758,
+      "recall": 0.8537877258711106,
+      "f1-score": 0.8601334082501566,
+      "support": 82332.0
+    },
+    "weighted avg": {
+      "precision": 0.8823870488103075,
+      "recall": 0.8663095758635767,
+      "f1-score": 0.8631077928842827,
+      "support": 82332.0
+    }
+  },
+  "model": "FLAML",
+  "validation_f1": 0.9728467802451294,
+  "search_seconds": 89.86932630000047,
+  "best_estimator": "lgbm",
+  "best_config": {
+    "n_estimators": 1672,
+    "num_leaves": 19,
+    "min_child_samples": 8,
+    "learning_rate": 0.1581778141346072,
+    "log_max_bin": 6,
+    "colsample_bytree": 0.9778726268416658,
+    "reg_alpha": 0.020209842259086987,
+    "reg_lambda": 0.48726774983663307
+  }
+}

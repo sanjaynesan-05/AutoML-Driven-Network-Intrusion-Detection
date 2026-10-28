@@ -1,0 +1,17 @@
+{
+  "model": "AutoGluon Tabular",
+  "selected_model": "WeightedEnsemble_L2",
+  "test_metrics": {
+    "f1": 0.8853185268318615,
+    "accuracy": 0.8585118787348783,
+    "balanced_accuracy": 0.8434951111439685,
+    "mcc": 0.7345135778637275,
+    "roc_auc": 0.9833364707467548,
+    "precision": 0.7994310605387146,
+    "recall": 0.9918821141798289
+  },
+  "validation_f1": 0.9779582366589327,
+  "prediction_seconds_including_evaluate": 30.98265999999967,
+  "search_seconds_configured": 90,
+  "search_seconds_measured": 92.66
+}

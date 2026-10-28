@@ -1,0 +1,50 @@
+{
+  "train": {
+    "binary_counts": {
+      "1": 119341,
+      "0": 56000
+    },
+    "attack_category_counts": {
+      "Normal": 56000,
+      "Generic": 40000,
+      "Exploits": 33393,
+      "Fuzzers": 18184,
+      "DoS": 12264,
+      "Reconnaissance": 10491,
+      "Analysis": 2000,
+      "Backdoor": 1746,
+      "Shellcode": 1133,
+      "Worms": 130
+    },
+    "rare_categories_below_1pct": [
+      "Backdoor",
+      "Shellcode",
+      "Worms"
+    ]
+  },
+  "test": {
+    "binary_counts": {
+      "1": 45332,
+      "0": 37000
+    },
+    "attack_category_counts": {
+      "Normal": 37000,
+      "Generic": 18871,
+      "Exploits": 11132,
+      "Fuzzers": 6062,
+      "DoS": 4089,
+      "Reconnaissance": 3496,
+      "Analysis": 677,
+      "Backdoor": 583,
+      "Shellcode": 378,
+      "Worms": 44
+    },
+    "rare_categories_below_1pct": [
+      "Analysis",
+      "Backdoor",
+      "Shellcode",
+      "Worms"
+    ]
+  },
+  "interpretation": "No demographic attributes are used. This is a class representation, collection, and category-level performance analysis; it is not demographic fairness analysis. Rare attack classes warrant per-class recall review."
+}

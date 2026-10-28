@@ -1,0 +1,1 @@
+The second row deliberately adds an exact copy of the training label as `__intentional_leak_label`. It is a synthetic diagnostic and is excluded from all valid model comparisons and deployment. A near-perfect score demonstrates target exposure, not traffic detection ability. The supplied `id` was separately excluded because it is a partition-local sequence identifier.

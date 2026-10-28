@@ -1,0 +1,13 @@
+flowchart LR
+  A[UNSW-NB15 training and test CSVs] --> B[Dataset validation and EDA]
+  B --> C[Training-only leakage-safe preprocessing]
+  C --> D[Manual baseline and Grid / Random / Optuna tuning]
+  C --> E[FLAML]
+  C --> F[AutoGluon Tabular]
+  D --> G[Validation-based model selection]
+  E --> G
+  F --> G
+  G --> H[Held-out test evaluation]
+  H --> I[SHAP and critical evaluation]
+  G --> J[Saved valid model]
+  J --> K[Streamlit application]

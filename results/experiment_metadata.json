@@ -1,0 +1,23 @@
+{
+  "python": "3.11.9",
+  "interpreter": "D:\\AUTOML\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.14.1",
+    "optuna": "4.1.0",
+    "joblib": "1.4.2",
+    "flaml": "2.3.3",
+    "autogluon.tabular": "1.2",
+    "shap": "0.46.0",
+    "matplotlib": "3.9.2",
+    "seaborn": "0.13.2",
+    "streamlit": "1.40.2",
+    "pytest": "8.3.3"
+  },
+  "cpu_logical": 12,
+  "automl_budget_seconds": 90,
+  "resource_note": "AutoGluon observed 2.81 GB available memory at run start; two workers were used."
+}

@@ -1,0 +1,933 @@
+{
+  "train": {
+    "shape": [
+      175341,
+      45
+    ],
+    "columns": [
+      "id",
+      "dur",
+      "proto",
+      "service",
+      "state",
+      "spkts",
+      "dpkts",
+      "sbytes",
+      "dbytes",
+      "rate",
+      "sttl",
+      "dttl",
+      "sload",
+      "dload",
+      "sloss",
+      "dloss",
+      "sinpkt",
+      "dinpkt",
+      "sjit",
+      "djit",
+      "swin",
+      "stcpb",
+      "dtcpb",
+      "dwin",
+      "tcprtt",
+      "synack",
+      "ackdat",
+      "smean",
+      "dmean",
+      "trans_depth",
+      "response_body_len",
+      "ct_srv_src",
+      "ct_state_ttl",
+      "ct_dst_ltm",
+      "ct_src_dport_ltm",
+      "ct_dst_sport_ltm",
+      "ct_dst_src_ltm",
+      "is_ftp_login",
+      "ct_ftp_cmd",
+      "ct_flw_http_mthd",
+      "ct_src_ltm",
+      "ct_srv_dst",
+      "is_sm_ips_ports",
+      "attack_cat",
+      "label"
+    ],
+    "dtypes": {
+      "id": "int64",
+      "dur": "float64",
+      "proto": "object",
+      "service": "object",
+      "state": "object",
+      "spkts": "int64",
+      "dpkts": "int64",
+      "sbytes": "int64",
+      "dbytes": "int64",
+      "rate": "float64",
+      "sttl": "int64",
+      "dttl": "int64",
+      "sload": "float64",
+      "dload": "float64",
+      "sloss": "int64",
+      "dloss": "int64",
+      "sinpkt": "float64",
+      "dinpkt": "float64",
+      "sjit": "float64",
+      "djit": "float64",
+      "swin": "int64",
+      "stcpb": "int64",
+      "dtcpb": "int64",
+      "dwin": "int64",
+      "tcprtt": "float64",
+      "synack": "float64",
+      "ackdat": "float64",
+      "smean": "int64",
+      "dmean": "int64",
+      "trans_depth": "int64",
+      "response_body_len": "int64",
+      "ct_srv_src": "int64",
+      "ct_state_ttl": "int64",
+      "ct_dst_ltm": "int64",
+      "ct_src_dport_ltm": "int64",
+      "ct_dst_sport_ltm": "int64",
+      "ct_dst_src_ltm": "int64",
+      "is_ftp_login": "int64",
+      "ct_ftp_cmd": "int64",
+      "ct_flw_http_mthd": "int64",
+      "ct_src_ltm": "int64",
+      "ct_srv_dst": "int64",
+      "is_sm_ips_ports": "int64",
+      "attack_cat": "object",
+      "label": "int64"
+    },
+    "missing_by_column": {
+      "id": 0,
+      "dur": 0,
+      "proto": 0,
+      "service": 0,
+      "state": 0,
+      "spkts": 0,
+      "dpkts": 0,
+      "sbytes": 0,
+      "dbytes": 0,
+      "rate": 0,
+      "sttl": 0,
+      "dttl": 0,
+      "sload": 0,
+      "dload": 0,
+      "sloss": 0,
+      "dloss": 0,
+      "sinpkt": 0,
+      "dinpkt": 0,
+      "sjit": 0,
+      "djit": 0,
+      "swin": 0,
+      "stcpb": 0,
+      "dtcpb": 0,
+      "dwin": 0,
+      "tcprtt": 0,
+      "synack": 0,
+      "ackdat": 0,
+      "smean": 0,
+      "dmean": 0,
+      "trans_depth": 0,
+      "response_body_len": 0,
+      "ct_srv_src": 0,
+      "ct_state_ttl": 0,
+      "ct_dst_ltm": 0,
+      "ct_src_dport_ltm": 0,
+      "ct_dst_sport_ltm": 0,
+      "ct_dst_src_ltm": 0,
+      "is_ftp_login": 0,
+      "ct_ftp_cmd": 0,
+      "ct_flw_http_mthd": 0,
+      "ct_src_ltm": 0,
+      "ct_srv_dst": 0,
+      "is_sm_ips_ports": 0,
+      "attack_cat": 0,
+      "label": 0
+    },
+    "infinite_by_column": {
+      "id": 0,
+      "dur": 0,
+      "spkts": 0,
+      "dpkts": 0,
+      "sbytes": 0,
+      "dbytes": 0,
+      "rate": 0,
+      "sttl": 0,
+      "dttl": 0,
+      "sload": 0,
+      "dload": 0,
+      "sloss": 0,
+      "dloss": 0,
+      "sinpkt": 0,
+      "dinpkt": 0,
+      "sjit": 0,
+      "djit": 0,
+      "swin": 0,
+      "stcpb": 0,
+      "dtcpb": 0,
+      "dwin": 0,
+      "tcprtt": 0,
+      "synack": 0,
+      "ackdat": 0,
+      "smean": 0,
+      "dmean": 0,
+      "trans_depth": 0,
+      "response_body_len": 0,
+      "ct_srv_src": 0,
+      "ct_state_ttl": 0,
+      "ct_dst_ltm": 0,
+      "ct_src_dport_ltm": 0,
+      "ct_dst_sport_ltm": 0,
+      "ct_dst_src_ltm": 0,
+      "is_ftp_login": 0,
+      "ct_ftp_cmd": 0,
+      "ct_flw_http_mthd": 0,
+      "ct_src_ltm": 0,
+      "ct_srv_dst": 0,
+      "is_sm_ips_ports": 0,
+      "label": 0
+    },
+    "duplicate_rows": 0,
+    "label_counts": {
+      "1": 119341,
+      "0": 56000
+    },
+    "attack_category_counts": {
+      "Normal": 56000,
+      "Generic": 40000,
+      "Exploits": 33393,
+      "Fuzzers": 18184,
+      "DoS": 12264,
+      "Reconnaissance": 10491,
+      "Analysis": 2000,
+      "Backdoor": 1746,
+      "Shellcode": 1133,
+      "Worms": 130
+    }
+  },
+  "test": {
+    "shape": [
+      82332,
+      45
+    ],
+    "columns": [
+      "id",
+      "dur",
+      "proto",
+      "service",
+      "state",
+      "spkts",
+      "dpkts",
+      "sbytes",
+      "dbytes",
+      "rate",
+      "sttl",
+      "dttl",
+      "sload",
+      "dload",
+      "sloss",
+      "dloss",
+      "sinpkt",
+      "dinpkt",
+      "sjit",
+      "djit",
+      "swin",
+      "stcpb",
+      "dtcpb",
+      "dwin",
+      "tcprtt",
+      "synack",
+      "ackdat",
+      "smean",
+      "dmean",
+      "trans_depth",
+      "response_body_len",
+      "ct_srv_src",
+      "ct_state_ttl",
+      "ct_dst_ltm",
+      "ct_src_dport_ltm",
+      "ct_dst_sport_ltm",
+      "ct_dst_src_ltm",
+      "is_ftp_login",
+      "ct_ftp_cmd",
+      "ct_flw_http_mthd",
+      "ct_src_ltm",
+      "ct_srv_dst",
+      "is_sm_ips_ports",
+      "attack_cat",
+      "label"
+    ],
+    "dtypes": {
+      "id": "int64",
+      "dur": "float64",
+      "proto": "object",
+      "service": "object",
+      "state": "object",
+      "spkts": "int64",
+      "dpkts": "int64",
+      "sbytes": "int64",
+      "dbytes": "int64",
+      "rate": "float64",
+      "sttl": "int64",
+      "dttl": "int64",
+      "sload": "float64",
+      "dload": "float64",
+      "sloss": "int64",
+      "dloss": "int64",
+      "sinpkt": "float64",
+      "dinpkt": "float64",
+      "sjit": "float64",
+      "djit": "float64",
+      "swin": "int64",
+      "stcpb": "int64",
+      "dtcpb": "int64",
+      "dwin": "int64",
+      "tcprtt": "float64",
+      "synack": "float64",
+      "ackdat": "float64",
+      "smean": "int64",
+      "dmean": "int64",
+      "trans_depth": "int64",
+      "response_body_len": "int64",
+      "ct_srv_src": "int64",
+      "ct_state_ttl": "int64",
+      "ct_dst_ltm": "int64",
+      "ct_src_dport_ltm": "int64",
+      "ct_dst_sport_ltm": "int64",
+      "ct_dst_src_ltm": "int64",
+      "is_ftp_login": "int64",
+      "ct_ftp_cmd": "int64",
+      "ct_flw_http_mthd": "int64",
+      "ct_src_ltm": "int64",
+      "ct_srv_dst": "int64",
+      "is_sm_ips_ports": "int64",
+      "attack_cat": "object",
+      "label": "int64"
+    },
+    "missing_by_column": {
+      "id": 0,
+      "dur": 0,
+      "proto": 0,
+      "service": 0,
+      "state": 0,
+      "spkts": 0,
+      "dpkts": 0,
+      "sbytes": 0,
+      "dbytes": 0,
+      "rate": 0,
+      "sttl": 0,
+      "dttl": 0,
+      "sload": 0,
+      "dload": 0,
+      "sloss": 0,
+      "dloss": 0,
+      "sinpkt": 0,
+      "dinpkt": 0,
+      "sjit": 0,
+      "djit": 0,
+      "swin": 0,
+      "stcpb": 0,
+      "dtcpb": 0,
+      "dwin": 0,
+      "tcprtt": 0,
+      "synack": 0,
+      "ackdat": 0,
+      "smean": 0,
+      "dmean": 0,
+      "trans_depth": 0,
+      "response_body_len": 0,
+      "ct_srv_src": 0,
+      "ct_state_ttl": 0,
+      "ct_dst_ltm": 0,
+      "ct_src_dport_ltm": 0,
+      "ct_dst_sport_ltm": 0,
+      "ct_dst_src_ltm": 0,
+      "is_ftp_login": 0,
+      "ct_ftp_cmd": 0,
+      "ct_flw_http_mthd": 0,
+      "ct_src_ltm": 0,
+      "ct_srv_dst": 0,
+      "is_sm_ips_ports": 0,
+      "attack_cat": 0,
+      "label": 0
+    },
+    "infinite_by_column": {
+      "id": 0,
+      "dur": 0,
+      "spkts": 0,
+      "dpkts": 0,
+      "sbytes": 0,
+      "dbytes": 0,
+      "rate": 0,
+      "sttl": 0,
+      "dttl": 0,
+      "sload": 0,
+      "dload": 0,
+      "sloss": 0,
+      "dloss": 0,
+      "sinpkt": 0,
+      "dinpkt": 0,
+      "sjit": 0,
+      "djit": 0,
+      "swin": 0,
+      "stcpb": 0,
+      "dtcpb": 0,
+      "dwin": 0,
+      "tcprtt": 0,
+      "synack": 0,
+      "ackdat": 0,
+      "smean": 0,
+      "dmean": 0,
+      "trans_depth": 0,
+      "response_body_len": 0,
+      "ct_srv_src": 0,
+      "ct_state_ttl": 0,
+      "ct_dst_ltm": 0,
+      "ct_src_dport_ltm": 0,
+      "ct_dst_sport_ltm": 0,
+      "ct_dst_src_ltm": 0,
+      "is_ftp_login": 0,
+      "ct_ftp_cmd": 0,
+      "ct_flw_http_mthd": 0,
+      "ct_src_ltm": 0,
+      "ct_srv_dst": 0,
+      "is_sm_ips_ports": 0,
+      "label": 0
+    },
+    "duplicate_rows": 0,
+    "label_counts": {
+      "1": 45332,
+      "0": 37000
+    },
+    "attack_category_counts": {
+      "Normal": 37000,
+      "Generic": 18871,
+      "Exploits": 11132,
+      "Fuzzers": 6062,
+      "DoS": 4089,
+      "Reconnaissance": 3496,
+      "Analysis": 677,
+      "Backdoor": 583,
+      "Shellcode": 378,
+      "Worms": 44
+    }
+  },
+  "train_test_feature_columns_match": true,
+  "numeric_distribution_shift": {
+    "response_body_len": {
+      "train_mean": 2144.2916545474245,
+      "test_mean": 1595.3718845649323,
+      "ks_statistic": 0.009599999999999942
+    },
+    "ct_dst_ltm": {
+      "train_mean": 6.193936386811983,
+      "test_mean": 5.744922994704368,
+      "ks_statistic": 0.07445000000000002
+    },
+    "sloss": {
+      "train_mean": 4.953000153985662,
+      "test_mean": 4.753692367487733,
+      "ks_statistic": 0.07050000000000001
+    },
+    "sbytes": {
+      "train_mean": 8844.843835725815,
+      "test_mean": 7993.908164504688,
+      "ks_statistic": 0.047099999999999975
+    },
+    "ct_src_ltm": {
+      "train_mean": 6.955789005423717,
+      "test_mean": 6.468359811494923,
+      "ks_statistic": 0.07274999999999998
+    },
+    "spkts": {
+      "train_mean": 20.29866374664226,
+      "test_mean": 18.666472331535733,
+      "ks_statistic": 0.04654999999999998
+    },
+    "ct_src_dport_ltm": {
+      "train_mean": 5.383538362390998,
+      "test_mean": 4.928897633969781,
+      "ks_statistic": 0.08584999999999998
+    },
+    "sinpkt": {
+      "train_mean": 985.9768636758546,
+      "test_mean": 755.3943010848151,
+      "ks_statistic": 0.11245
+    },
+    "ct_srv_dst": {
+      "train_mean": 9.100757951648502,
+      "test_mean": 9.164261769421367,
+      "ks_statistic": 0.0494
+    },
+    "tcprtt": {
+      "train_mean": 0.04139564435585516,
+      "test_mean": 0.0559250444298693,
+      "ks_statistic": 0.07045000000000001
+    },
+    "sjit": {
+      "train_mean": 4976.25422621193,
+      "test_mean": 6363.075099675206,
+      "ks_statistic": 0.05690000000000006
+    },
+    "is_sm_ips_ports": {
+      "train_mean": 0.015752162928236977,
+      "test_mean": 0.011125686245931108,
+      "ks_statistic": 0.00649999999999995
+    },
+    "dloss": {
+      "train_mean": 6.948009877895073,
+      "test_mean": 6.308555604139339,
+      "ks_statistic": 0.05174999999999996
+    },
+    "dtcpb": {
+      "train_mean": 968877027.0711528,
+      "test_mean": 1073464670.8803867,
+      "ks_statistic": 0.05350000000000005
+    },
+    "smean": {
+      "train_mean": 136.7517694093224,
+      "test_mean": 139.52860370208424,
+      "ks_statistic": 0.04200000000000004
+    },
+    "stcpb": {
+      "train_mean": 969250421.9105115,
+      "test_mean": 1084641551.1152892,
+      "ks_statistic": 0.053700000000000025
+    },
+    "ct_flw_http_mthd": {
+      "train_mean": 0.13306642485214526,
+      "test_mean": 0.1297429917893407,
+      "ks_statistic": 0.010649999999999937
+    },
+    "dur": {
+      "train_mean": 1.3593886921256295,
+      "test_mean": 1.0067561463464996,
+      "ks_statistic": 0.0902
+    },
+    "id": {
+      "train_mean": 87671.0,
+      "test_mean": 41166.5,
+      "ks_statistic": 0.5338
+    },
+    "dmean": {
+      "train_mean": 124.17338215249143,
+      "test_mean": 116.2750692318904,
+      "ks_statistic": 0.04735
+    },
+    "synack": {
+      "train_mean": 0.021020450476500082,
+      "test_mean": 0.02925592920128261,
+      "ks_statistic": 0.06500000000000006
+    },
+    "ct_srv_src": {
+      "train_mean": 9.306437170998226,
+      "test_mean": 9.54660399358694,
+      "ks_statistic": 0.05879999999999996
+    },
+    "rate": {
+      "train_mean": 95406.18710518943,
+      "test_mean": 82410.88673910811,
+      "ks_statistic": 0.08684999999999998
+    },
+    "trans_depth": {
+      "train_mean": 0.10598205781876457,
+      "test_mean": 0.09427683039401448,
+      "ks_statistic": 0.010549999999999948
+    },
+    "sttl": {
+      "train_mean": 179.546996994428,
+      "test_mean": 180.96766749259098,
+      "ks_statistic": 0.022049999999999986
+    },
+    "djit": {
+      "train_mean": 604.3538264155103,
+      "test_mean": 535.1804302089224,
+      "ks_statistic": 0.0393
+    },
+    "dttl": {
+      "train_mean": 79.60956650184498,
+      "test_mean": 95.71300344944858,
+      "ks_statistic": 0.06330000000000002
+    },
+    "is_ftp_login": {
+      "train_mean": 0.014948015581067748,
+      "test_mean": 0.008283534956031676,
+      "ks_statistic": 0.006300000000000083
+    },
+    "ct_state_ttl": {
+      "train_mean": 1.3041787146189425,
+      "test_mean": 1.3692731866103094,
+      "ks_statistic": 0.03264999999999996
+    },
+    "ct_ftp_cmd": {
+      "train_mean": 0.014948015581067748,
+      "test_mean": 0.008380702521498324,
+      "ks_statistic": 0.006300000000000083
+    },
+    "ct_dst_sport_ltm": {
+      "train_mean": 4.206255239789895,
+      "test_mean": 3.663010737015984,
+      "ks_statistic": 0.08455000000000001
+    },
+    "swin": {
+      "train_mean": 116.25733855743951,
+      "test_mean": 133.45908030899287,
+      "ks_statistic": 0.07075000000000004
+    },
+    "dbytes": {
+      "train_mean": 14928.918564397374,
+      "test_mean": 13233.78556332896,
+      "ks_statistic": 0.04734999999999995
+    },
+    "ct_dst_src_ltm": {
+      "train_mean": 8.729880632595913,
+      "test_mean": 7.456359617159792,
+      "ks_statistic": 0.10604999999999998
+    },
+    "dload": {
+      "train_mean": 671205.5741883258,
+      "test_mean": 630546.9589998035,
+      "ks_statistic": 0.0469
+    },
+    "sload": {
+      "train_mean": 73454033.19406255,
+      "test_mean": 64549016.91405929,
+      "ks_statistic": 0.0807
+    },
+    "dwin": {
+      "train_mean": 115.01362487952048,
+      "test_mean": 128.28662002623525,
+      "ks_statistic": 0.05309999999999998
+    },
+    "dpkts": {
+      "train_mean": 18.969590683297117,
+      "test_mean": 17.54593596657436,
+      "ks_statistic": 0.04685
+    },
+    "ackdat": {
+      "train_mean": 0.02037519387935508,
+      "test_mean": 0.0266691152285867,
+      "ks_statistic": 0.09824999999999995
+    },
+    "dinpkt": {
+      "train_mean": 88.21629640844412,
+      "test_mean": 121.70128382695671,
+      "ks_statistic": 0.05494999999999994
+    }
+  },
+  "exact_duplicate_feature_rows_across_partitions": 0,
+  "feature_reference": {
+    "shape": [
+      49,
+      4
+    ],
+    "columns": [
+      "No.",
+      "Name",
+      "Type ",
+      "Description"
+    ],
+    "sample": [
+      {
+        "No.": 1,
+        "Name": "srcip",
+        "Type ": "nominal",
+        "Description": "Source IP address"
+      },
+      {
+        "No.": 2,
+        "Name": "sport",
+        "Type ": "integer",
+        "Description": "Source port number"
+      },
+      {
+        "No.": 3,
+        "Name": "dstip",
+        "Type ": "nominal",
+        "Description": "Destination IP address"
+      },
+      {
+        "No.": 4,
+        "Name": "dsport",
+        "Type ": "integer",
+        "Description": "Destination port number"
+      },
+      {
+        "No.": 5,
+        "Name": "proto",
+        "Type ": "nominal",
+        "Description": "Transaction protocol"
+      },
+      {
+        "No.": 6,
+        "Name": "state",
+        "Type ": "nominal",
+        "Description": "Indicates to the state and its dependent protocol, e.g. ACC, CLO, CON, ECO, ECR, FIN, INT, MAS, PAR, REQ, RST, TST, TXD, URH, URN, and (-) (if not used state)"
+      },
+      {
+        "No.": 7,
+        "Name": "dur",
+        "Type ": "Float",
+        "Description": "Record total duration"
+      },
+      {
+        "No.": 8,
+        "Name": "sbytes",
+        "Type ": "Integer",
+        "Description": "Source to destination transaction bytes "
+      },
+      {
+        "No.": 9,
+        "Name": "dbytes",
+        "Type ": "Integer",
+        "Description": "Destination to source transaction bytes"
+      },
+      {
+        "No.": 10,
+        "Name": "sttl",
+        "Type ": "Integer",
+        "Description": "Source to destination time to live value "
+      },
+      {
+        "No.": 11,
+        "Name": "dttl",
+        "Type ": "Integer",
+        "Description": "Destination to source time to live value"
+      },
+      {
+        "No.": 12,
+        "Name": "sloss",
+        "Type ": "Integer",
+        "Description": "Source packets retransmitted or dropped "
+      },
+      {
+        "No.": 13,
+        "Name": "dloss",
+        "Type ": "Integer",
+        "Description": "Destination packets retransmitted or dropped"
+      },
+      {
+        "No.": 14,
+        "Name": "service",
+        "Type ": "nominal",
+        "Description": "http, ftp, smtp, ssh, dns, ftp-data ,irc  and (-) if not much used service"
+      },
+      {
+        "No.": 15,
+        "Name": "Sload",
+        "Type ": "Float",
+        "Description": "Source bits per second"
+      },
+      {
+        "No.": 16,
+        "Name": "Dload",
+        "Type ": "Float",
+        "Description": "Destination bits per second"
+      },
+      {
+        "No.": 17,
+        "Name": "Spkts",
+        "Type ": "integer",
+        "Description": "Source to destination packet count "
+      },
+      {
+        "No.": 18,
+        "Name": "Dpkts",
+        "Type ": "integer",
+        "Description": "Destination to source packet count"
+      },
+      {
+        "No.": 19,
+        "Name": "swin",
+        "Type ": "integer",
+        "Description": "Source TCP window advertisement value"
+      },
+      {
+        "No.": 20,
+        "Name": "dwin",
+        "Type ": "integer",
+        "Description": "Destination TCP window advertisement value"
+      },
+      {
+        "No.": 21,
+        "Name": "stcpb",
+        "Type ": "integer",
+        "Description": "Source TCP base sequence number"
+      },
+      {
+        "No.": 22,
+        "Name": "dtcpb",
+        "Type ": "integer",
+        "Description": "Destination TCP base sequence number"
+      },
+      {
+        "No.": 23,
+        "Name": "smeansz",
+        "Type ": "integer",
+        "Description": "Mean of the ?ow packet size transmitted by the src "
+      },
+      {
+        "No.": 24,
+        "Name": "dmeansz",
+        "Type ": "integer",
+        "Description": "Mean of the ?ow packet size transmitted by the dst "
+      },
+      {
+        "No.": 25,
+        "Name": "trans_depth",
+        "Type ": "integer",
+        "Description": "Represents the pipelined depth into the connection of http request/response transaction"
+      },
+      {
+        "No.": 26,
+        "Name": "res_bdy_len",
+        "Type ": "integer",
+        "Description": "Actual uncompressed content size of the data transferred from the server\u2019s http service."
+      },
+      {
+        "No.": 27,
+        "Name": "Sjit",
+        "Type ": "Float",
+        "Description": "Source jitter (mSec)"
+      },
+      {
+        "No.": 28,
+        "Name": "Djit",
+        "Type ": "Float",
+        "Description": "Destination jitter (mSec)"
+      },
+      {
+        "No.": 29,
+        "Name": "Stime",
+        "Type ": "Timestamp",
+        "Description": "record start time"
+      },
+      {
+        "No.": 30,
+        "Name": "Ltime",
+        "Type ": "Timestamp",
+        "Description": "record last time"
+      },
+      {
+        "No.": 31,
+        "Name": "Sintpkt",
+        "Type ": "Float",
+        "Description": "Source interpacket arrival time (mSec)"
+      },
+      {
+        "No.": 32,
+        "Name": "Dintpkt",
+        "Type ": "Float",
+        "Description": "Destination interpacket arrival time (mSec)"
+      },
+      {
+        "No.": 33,
+        "Name": "tcprtt",
+        "Type ": "Float",
+        "Description": "TCP connection setup round-trip time, the sum of \u2019synack\u2019 and \u2019ackdat\u2019."
+      },
+      {
+        "No.": 34,
+        "Name": "synack",
+        "Type ": "Float",
+        "Description": "TCP connection setup time, the time between the SYN and the SYN_ACK packets."
+      },
+      {
+        "No.": 35,
+        "Name": "ackdat",
+        "Type ": "Float",
+        "Description": "TCP connection setup time, the time between the SYN_ACK and the ACK packets."
+      },
+      {
+        "No.": 36,
+        "Name": "is_sm_ips_ports",
+        "Type ": "Binary",
+        "Description": "If source (1) and destination (3)IP addresses equal and port numbers (2)(4)  equal then, this variable takes value 1 else 0"
+      },
+      {
+        "No.": 37,
+        "Name": "ct_state_ttl",
+        "Type ": "Integer",
+        "Description": "No. for each state (6) according to specific range of values for source/destination time to live (10) (11)."
+      },
+      {
+        "No.": 38,
+        "Name": "ct_flw_http_mthd",
+        "Type ": "Integer",
+        "Description": "No. of flows that has methods such as Get and Post in http service."
+      },
+      {
+        "No.": 39,
+        "Name": "is_ftp_login",
+        "Type ": "Binary",
+        "Description": "If the ftp session is accessed by user and password then 1 else 0. "
+      },
+      {
+        "No.": 40,
+        "Name": "ct_ftp_cmd",
+        "Type ": "integer",
+        "Description": "No of flows that has a command in ftp session."
+      },
+      {
+        "No.": 41,
+        "Name": "ct_srv_src",
+        "Type ": "integer",
+        "Description": "No. of connections that contain the same service (14) and source address (1) in 100 connections according to the last time (26)."
+      },
+      {
+        "No.": 42,
+        "Name": "ct_srv_dst",
+        "Type ": "integer",
+        "Description": "No. of connections that contain the same service (14) and destination address (3) in 100 connections according to the last time (26)."
+      },
+      {
+        "No.": 43,
+        "Name": "ct_dst_ltm",
+        "Type ": "integer",
+        "Description": "No. of connections of the same destination address (3) in 100 connections according to the last time (26)."
+      },
+      {
+        "No.": 44,
+        "Name": "ct_src_ ltm",
+        "Type ": "integer",
+        "Description": "No. of connections of the same source address (1) in 100 connections according to the last time (26)."
+      },
+      {
+        "No.": 45,
+        "Name": "ct_src_dport_ltm",
+        "Type ": "integer",
+        "Description": "No of connections of the same source address (1) and the destination port (4) in 100 connections according to the last time (26)."
+      },
+      {
+        "No.": 46,
+        "Name": "ct_dst_sport_ltm",
+        "Type ": "integer",
+        "Description": "No of connections of the same destination address (3) and the source port (2) in 100 connections according to the last time (26)."
+      },
+      {
+        "No.": 47,
+        "Name": "ct_dst_src_ltm",
+        "Type ": "integer",
+        "Description": "No of connections of the same source (1) and the destination (3) address in in 100 connections according to the last time (26)."
+      },
+      {
+        "No.": 48,
+        "Name": "attack_cat",
+        "Type ": "nominal",
+        "Description": "The name of each attack category. In this data set , nine categories e.g. Fuzzers, Analysis, Backdoors, DoS Exploits, Generic, Reconnaissance, Shellcode and Worms"
+      },
+      {
+        "No.": 49,
+        "Name": "Label",
+        "Type ": "binary",
+        "Description": "0 for normal and 1 for attack records"
+      }
+    ]
+  },
+  "excluded_features": {
+    "label": "target",
+    "attack_cat": "target-derived multiclass label",
+    "id": "partition-specific record identifier excluded from the reusable binary model"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "accuracy": 0.8585118787348783,
+  "precision": 0.7994310605387146,
+  "recall": 0.9918821141798289,
+  "f1": 0.8853185268318615,
+  "roc_auc": 0.9833364707467549,
+  "pr_auc": 0.9874501666854573,
+  "prediction_seconds": 18.46892899999966,
+  "confusion_matrix": [
+    [
+      25719,
+      11281
+    ],
+    [
+      368,
+      44964
+    ]
+  ],
+  "per_class": {
+    "0": {
+      "precision": 0.9858933568444053,
+      "recall": 0.6951081081081081,
+      "f1-score": 0.8153502306338866,
+      "support": 37000.0
+    },
+    "1": {
+      "precision": 0.7994310605387146,
+      "recall": 0.9918821141798289,
+      "f1-score": 0.8853185268318615,
+      "support": 45332.0
+    },
+    "accuracy": 0.8585118787348783,
+    "macro avg": {
+      "precision": 0.8926622086915599,
+      "recall": 0.8434951111439685,
+      "f1-score": 0.8503343787328741,
+      "support": 82332.0
+    },
+    "weighted avg": {
+      "precision": 0.8832272146866834,
+      "recall": 0.8585118787348783,
+      "f1-score": 0.8538747752003566,
+      "support": 82332.0
+    }
+  },
+  "model_name": "AutoGluon Tabular",
+  "selection_rule": "highest training-only validation F1 among available valid candidates; held-out test metrics are not used for selection",
+  "validation_f1": 0.9779582366589328,
+  "target": "label (0=Normal, 1=Attack)",
+  "input_features": [
+    "dur",
+    "proto",
+    "service",
+    "state",
+    "spkts",
+    "dpkts",
+    "sbytes",
+    "dbytes",
+    "rate",
+    "sttl",
+    "dttl",
+    "sload",
+    "dload",
+    "sloss",
+    "dloss",
+    "sinpkt",
+    "dinpkt",
+    "sjit",
+    "djit",
+    "swin",
+    "stcpb",
+    "dtcpb",
+    "dwin",
+    "tcprtt",
+    "synack",
+    "ackdat",
+    "smean",
+    "dmean",
+    "trans_depth",
+    "response_body_len",
+    "ct_srv_src",
+    "ct_state_ttl",
+    "ct_dst_ltm",
+    "ct_src_dport_ltm",
+    "ct_dst_sport_ltm",
+    "ct_dst_src_ltm",
+    "is_ftp_login",
+    "ct_ftp_cmd",
+    "ct_flw_http_mthd",
+    "ct_src_ltm",
+    "ct_srv_dst",
+    "is_sm_ips_ports"
+  ],
+  "excluded_features": {
+    "label": "target",
+    "attack_cat": "target-derived label",
+    "id": "partition-specific identifier"
+  },
+  "artifact": "D:\\AUTOML\\artifacts\\models\\autogluon",
+  "model_type": "autogluon"
+}

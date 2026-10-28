@@ -1,0 +1,50 @@
+{
+  "record_index": 0,
+  "predicted_class": 0,
+  "top_contributions": [
+    {
+      "feature": "ct_state_ttl",
+      "shap_value": -0.11279800202876762
+    },
+    {
+      "feature": "sttl",
+      "shap_value": -0.06613494557702299
+    },
+    {
+      "feature": "dttl",
+      "shap_value": -0.044347113381157564
+    },
+    {
+      "feature": "tcprtt",
+      "shap_value": -0.020129329170226418
+    },
+    {
+      "feature": "synack",
+      "shap_value": -0.019038644984374953
+    },
+    {
+      "feature": "proto_tcp",
+      "shap_value": -0.018751567902275286
+    },
+    {
+      "feature": "dload",
+      "shap_value": -0.01807403695925795
+    },
+    {
+      "feature": "sloss",
+      "shap_value": -0.016227480490818014
+    },
+    {
+      "feature": "rate",
+      "shap_value": -0.015973726511852346
+    },
+    {
+      "feature": "swin",
+      "shap_value": -0.015848250868035103
+    }
+  ],
+  "method": "TreeExplainer over transformed features; one training-partition sample; contribution values explain model output, not causation",
+  "is_surrogate": true,
+  "explained_model": "Random Forest baseline surrogate; the deployed AutoGluon weighted ensemble is evaluated separately",
+  "contribution_interpretation": "SHAP values are for class 1 (Attack): positive values push this model output toward Attack and negative values toward Normal."
+}

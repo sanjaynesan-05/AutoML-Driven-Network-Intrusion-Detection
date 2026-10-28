@@ -1,0 +1,2 @@
+record_type,estimator,validation_f1,config
+selected trial summary; detailed internal history unavailable in installed FLAML API,lgbm,0.9728467802451294,"{""n_estimators"": 1672, ""num_leaves"": 19, ""min_child_samples"": 8, ""learning_rate"": 0.1581778141346072, ""log_max_bin"": 6, ""colsample_bytree"": 0.9778726268416658, ""reg_alpha"": 0.020209842259086987, ""reg_lambda"": 0.48726774983663307}"

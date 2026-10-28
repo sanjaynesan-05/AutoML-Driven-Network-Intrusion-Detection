@@ -1,0 +1,20 @@
+{
+  "train_shape": [
+    175341,
+    45
+  ],
+  "test_shape": [
+    82332,
+    45
+  ],
+  "train_label": {
+    "1": 119341,
+    "0": 56000
+  },
+  "test_label": {
+    "1": 45332,
+    "0": 37000
+  },
+  "train_duplicates": 0,
+  "test_duplicates": 0
+}

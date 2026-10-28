@@ -1,0 +1,2 @@
+accuracy,precision,recall,f1,roc_auc,pr_auc,prediction_seconds,confusion_matrix,per_class,model,validation_f1,validation_fit_seconds,training_seconds,train_f1
+0.8866054511004227,0.8395208451235616,0.9817126974322774,0.9050659941835635,0.9838808761664691,0.9879541922872471,0.8207511999999042,"[[28493, 8507], [829, 44503]]",see baseline_metrics.json,RandomForest baseline,0.9638200183654729,1.7695948000000499,89.26257329999953,0.993908446423256
