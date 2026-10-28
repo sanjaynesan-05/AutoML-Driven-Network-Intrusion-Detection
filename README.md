@@ -42,6 +42,7 @@ The binary target is `label` (0 normal, 1 attack). `label`, `attack_cat`, and se
 ## Results
 
 Machine-readable profile, metrics, model card, plots, sample input, and leakage results are under `results/`; the report and presentation materials are in `reports/`.
+The Streamlit dashboard renders its benchmark, dataset, correlation, confusion-matrix, and explainability charts natively from the saved result tables, JSON metrics, and dataset partitions; PNG files in `results/figures/` are retained only as workflow artifacts.
 
 ## Research limits
 
