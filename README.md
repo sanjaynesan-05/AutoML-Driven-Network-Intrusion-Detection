@@ -14,7 +14,7 @@ python -m pip install -r requirements.txt
 ```
 
 The interpreter should be `D:\AUTOML\.venv\Scripts\python.exe`. Use the venv interpreter directly for all commands if activation is unavailable.
-The requirements pin PyArrow to a NumPy 1.x-compatible release; keep this pairing intact because Streamlit uses PyArrow for chart data conversion.
+The requirements pin PyArrow to a NumPy 1.x-compatible release and LightGBM to the range supported by AutoGluon 1.2; keep these pins intact because Streamlit uses PyArrow for chart data conversion and the trained AutoGluon artifact depends on the LightGBM runtime.
 
 ## Data and workflow
 

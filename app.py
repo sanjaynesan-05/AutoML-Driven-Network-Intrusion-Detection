@@ -169,7 +169,7 @@ elif section == "Model comparison":
         score=alt.Chart(alt.Data(values=comp.to_dict("records"))).mark_bar(cornerRadiusTopLeft=4,cornerRadiusTopRight=4).encode(x=alt.X("model:N",sort="-y",axis=alt.Axis(labelAngle=-25)),y=alt.Y(f"{metric}:Q",scale=alt.Scale(zero=False)),color=alt.Color("model:N",legend=None),tooltip=[alt.Tooltip("model:N")]+[alt.Tooltip(f"{x}:Q") for x in [metric,"validation_f1","precision","recall"] if x in comp.columns]).properties(title=f"{metric.replace('_',' ').title()} by model")
         st.altair_chart(score,use_container_width=True)
         if {"precision","recall"}.issubset(comp.columns):
-            trade=alt.Chart(alt.Data(values=comp.to_dict("records"))).mark_circle(size=150).encode(x="precision:Q",y="recall:Q",color="model:N",tooltip=["model","precision","recall","f1"]).properties(title="Precision–recall tradeoff")
+            trade=alt.Chart(alt.Data(values=comp.to_dict("records"))).mark_circle(size=150).encode(x=alt.X("precision:Q"),y=alt.Y("recall:Q"),color=alt.Color("model:N"),tooltip=[alt.Tooltip("model:N"),alt.Tooltip("precision:Q"),alt.Tooltip("recall:Q"),alt.Tooltip("f1:Q")]).properties(title="Precision–recall tradeoff")
             st.altair_chart(trade,use_container_width=True)
         show_table(comp)
     st.markdown("**Search time vs test F1**"); show_image("search_time_vs_f1.png")
