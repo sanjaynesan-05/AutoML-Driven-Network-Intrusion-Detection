@@ -42,7 +42,8 @@ def load_bundle():
     metrics = json.loads(METRICS.read_text(encoding="utf-8")) if METRICS.exists() else {}
     if meta.get("model_type") == "autogluon":
         from autogluon.tabular import TabularPredictor
-        model = TabularPredictor.load(meta["artifact"])
+        from src.config import resolve_artifact
+        model = TabularPredictor.load(str(resolve_artifact(meta["artifact"])))
     else:
         model = joblib.load(MODEL)
     return model, meta, metrics

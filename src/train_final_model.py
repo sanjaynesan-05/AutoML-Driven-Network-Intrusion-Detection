@@ -2,7 +2,7 @@ import json
 import joblib
 from .data_loader import load_partitions
 from .preprocessing import permitted_features,clean_infinities
-from .config import RESULTS,MODELS
+from .config import RESULTS,MODELS,resolve_artifact
 from .evaluation import evaluate
 from .model_registry import select_and_export
 
@@ -10,7 +10,7 @@ def run():
     meta=select_and_export(); train,test=load_partitions(); X=clean_infinities(permitted_features(test))
     if meta["model_type"]=="autogluon":
         from autogluon.tabular import TabularPredictor
-        model=TabularPredictor.load(meta["artifact"])
+        model=TabularPredictor.load(str(resolve_artifact(meta["artifact"])))
         from sklearn.metrics import accuracy_score,precision_score,recall_score,f1_score,roc_auc_score,average_precision_score,confusion_matrix,classification_report
         import time
         t=time.perf_counter(); pred=model.predict(X); prob=model.predict_proba(X)[1].to_numpy(); latency=time.perf_counter()-t

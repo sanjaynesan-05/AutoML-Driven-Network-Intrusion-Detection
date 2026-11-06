@@ -1,4 +1,4 @@
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 
 ROOT = Path(__file__).resolve().parents[1]
 DATASET_DIR = ROOT / "dataset"
@@ -19,3 +19,19 @@ MAX_JOBS = 4
 
 for _path in (RESULTS, FIGURES, MODELS, EXPLAINERS, LOGS):
     _path.mkdir(parents=True, exist_ok=True)
+
+
+def resolve_artifact(saved):
+    """Map a saved artifact path into this checkout.
+
+    Older metadata stores absolute paths from the machine that trained the model
+    (e.g. D:\\AUTOML\\artifacts\\models\\autogluon); rebase anything under
+    ``artifacts`` onto ROOT so the project works from any folder.
+    """
+    path = Path(saved)
+    if path.is_absolute() and path.exists():
+        return path
+    parts = PureWindowsPath(saved).parts  # accepts both \ and / separators
+    if "artifacts" in parts:
+        return ROOT.joinpath(*parts[parts.index("artifacts"):])
+    return ROOT / path

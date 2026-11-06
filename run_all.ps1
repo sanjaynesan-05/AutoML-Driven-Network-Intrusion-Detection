@@ -10,8 +10,12 @@ if ([System.IO.Path]::GetFullPath($Actual) -ne [System.IO.Path]::GetFullPath($Py
 function Invoke-Stage($Name,$Module) {
   if ($Stage -ne "all" -and $Stage -ne $Name) { return }
   "[$(Get-Date -Format o)] START $Name" | Tee-Object -FilePath $Log -Append
-  & $Python -m $Module 2>&1 | Tee-Object -FilePath $Log -Append
-  if ($LASTEXITCODE -ne 0) { "[$(Get-Date -Format o)] FAIL $Name exit=$LASTEXITCODE" | Tee-Object -FilePath $Log -Append; throw "Stage failed: $Name" }
+  # Windows PowerShell 5.1 turns native stderr lines (e.g. Optuna/AutoGluon logging) into
+  # terminating errors under "Stop"; relax it for the call and judge success by exit code.
+  $PrevPref=$ErrorActionPreference; $ErrorActionPreference="Continue"
+  & $Python -m $Module 2>&1 | ForEach-Object { "$_" } | Tee-Object -FilePath $Log -Append
+  $Code=$LASTEXITCODE; $ErrorActionPreference=$PrevPref
+  if ($Code -ne 0) { "[$(Get-Date -Format o)] FAIL $Name exit=$Code" | Tee-Object -FilePath $Log -Append; throw "Stage failed: $Name" }
   "[$(Get-Date -Format o)] PASS $Name" | Tee-Object -FilePath $Log -Append
 }
 Invoke-Stage "profile" "src.exploration"

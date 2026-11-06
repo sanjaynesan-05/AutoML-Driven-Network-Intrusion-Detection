@@ -1,7 +1,7 @@
 import json
 import joblib
 import pandas as pd
-from .config import RESULTS,MODELS
+from .config import ROOT,RESULTS,MODELS
 from .data_loader import load_partitions
 from .preprocessing import permitted_features
 
@@ -28,7 +28,7 @@ def select_and_export():
     # Validation score determines selection; tie favors baseline simplicity.
     score,name,path,metrics=max(candidates,key=lambda x:x[0])
     if name == "AutoGluon Tabular":
-        artifact=str(path)
+        artifact=path.relative_to(ROOT).as_posix()  # relative, so the checkout can move
     else:
         model=joblib.load(path); joblib.dump(model,MODELS/"final_model.joblib",compress=3); artifact="final_model.joblib"
     train,_=load_partitions(); feature_names=permitted_features(train).columns.tolist()
